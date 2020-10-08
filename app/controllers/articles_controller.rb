@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
   def show
   end
 
-  def new 
+  def new
     @article = Article.new
   end
 
@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.save
       redirect_to article_path(@article), notice: '保存できたよ！'
-    else 
+    else
       flash.now[:error] = '保存に失敗しました'
       render :new
     end
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if @article.update(article_params)
       redirect_to article_path(@article),notice: '更新できました！'
-    else 
+    else
       flash.now[:error] = '更新できませんでした。'
       render :edit
     end
