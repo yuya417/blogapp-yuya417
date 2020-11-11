@@ -34,23 +34,13 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
 
   delegate :birthday, :age, :gender,to: :profile, allow_nil: true
-  
+
   def has_written?(article)
     articles.exists?(id: article.id)
   end
 
   def has_liked?(article)
     likes.exists?(article_id: article.id)
-  end
-
-
-  def display_name
-    # if profile && profile.nickname
-    #   profile.nickname
-    # else 
-    #   self.email.split('@').first
-    # end
-    profile&.nickname || self.email.split('@').first
   end
 
   def follow!(user)
@@ -70,14 +60,6 @@ class User < ApplicationRecord
 
   def prepare_profile
     profile || build_profile
-  end
-
-  def avatar_image
-    if profile&.avatar&.attached?
-      profile.avatar
-    else
-      'default-avatar.png'
-    end
   end
 
   private
