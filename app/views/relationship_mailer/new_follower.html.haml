@@ -1,0 +1,4 @@
+%p #{@user.email} さん
+%p #{@follower.email}さんにフォローされました。
+
+= link_to 'プロフィールを確認する', account_url(@follower)
