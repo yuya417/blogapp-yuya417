@@ -1,0 +1,5 @@
+en:
+  dropdown_contents:
+    profile: 'Profile'
+    favorites: 'Favorites'
+    logout: 'Logout'

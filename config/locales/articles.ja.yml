@@ -1,0 +1,10 @@
+ja:
+  articles:
+    comment_list: 'コメント一覧'
+    add_comment_btn: 'コメントを追加'
+    edit_article: '編集'
+    delete_article: '削除'
+    delete_alert: '本当に削除してよろしいですか？'
+    eyecatch: 'アイキャッチ'
+    title: 'タイトル'
+    content: '内容'
