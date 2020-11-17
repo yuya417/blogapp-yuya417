@@ -14,8 +14,8 @@
           .dropdown
             = image_tag 'actions.svg', class: 'dropbtn'
             .dropdown-content.mini
-              = link_to '編集する', edit_article_path(@article)
-              = link_to '削除する', article_path(@article), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？'}
+              = link_to I18n.t('articles.edit_article'), edit_article_path(@article)
+              = link_to I18n.t('articles.delete_article'), article_path(@article), data: { method: 'delete', confirm: I18n.t('articles.delete_alert')}
   .article_content
     = @article.content
   - if user_signed_in?
@@ -33,17 +33,17 @@
     -#       = image_tag 'heart.svg'
 
 .article
-  %h2 コメント一覧
+  %h2= I18n.t('articles.comment_list')
   .comments-container
 
 
 .container
   .btn-secondary.show-comment-form
-    コメントを追加
+    = I18n.t('articles.add_comment_btn')
   .comment-text-area.hidden
     = text_area_tag :comment_content, '', class:'sm'
     .btn-secondary.add-comment-button
-      コメントを追加
+      = I18n.t('articles.add_comment_btn')
 
 
 = javascript_pack_tag 'article'

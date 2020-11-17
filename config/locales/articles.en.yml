@@ -1,0 +1,10 @@
+en:
+  articles:
+    comment_list: 'Comment list'
+    add_comment_btn: 'Add Comment'
+    edit_article: 'Edit'
+    delete_article: 'Delete'
+    delete_alert: 'Are you sure you want to delete it?'
+    eyecatch: 'Eyecatch'
+    title: 'Title'
+    content: 'Content'
