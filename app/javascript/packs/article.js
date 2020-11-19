@@ -11,6 +11,7 @@ const handleHeartDisplay = (hasLiked) => {
     $('.active-heart').removeClass('hidden')
   } else {
     $('.inactive-heart').removeClass('hidden')
+    
   }
 }
 
@@ -65,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then((response) => {
       const hasLiked = response.data.hasLiked
       handleHeartDisplay(hasLiked)
-      debugger
+      
     })
 
     listenInactiveHeartEvent(articleId)
